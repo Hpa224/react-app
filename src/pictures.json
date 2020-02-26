@@ -9,30 +9,30 @@
       "id": 2,
       "name": "Iron Man",
       "image": "https://img1.looper.com/img/uploads/2018/04/Iron-Man-Tony-Stark-Returns-Alive.jpg",
-      "count": 0
+      "clicked": false
    },
    {
       "id": 3,
       "name": "Rocket Raccoon",
       "image": "https://i.pinimg.com/736x/bd/a5/57/bda5576646a0ba90c7835cd50e12846b.jpg",
-      "count": 0
+      "clicked": false
    },
    {
       "id": 4,
       "name": "Nova",
       "image": "https://vignette.wikia.nocookie.net/marveldatabase/images/c/c6/Nova_Vol_4_36_Textless.jpg/revision/latest?cb=20120310084723",
-      "count": 0
+      "clicked": false
    },
    {
       "id": 5,
       "name": "Venom",
       "image": "https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/VenomVillain1.jpg",
-      "count": 0
+      "clicked": false
    },
    {
       "id": 6,
       "name": "Carnage",
       "image": "https://www.syfy.com/sites/syfy/files/styles/1200x680/public/2018/10/carnage_-_asm_361.jpg",
-      "count": 0
+      "clicked": false
    }
 ]
