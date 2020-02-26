@@ -12,8 +12,16 @@ class App extends Component {
     clicked:[]
   };
 
-  increment = (id) => {
-    this.setState({ score: this.state.score + 1 });
+  increment = (event) => {
+    const clicked = JSON.parse(event.target.dataset.clicked);
+    if(!clicked){
+      console.log("Not clicked")
+      event.target.dataset.clicked = "true";
+    }
+    else {
+      console.log("clicked")
+    }
+    this.setState({score: this.state.score + 1 });
     };
   
 
@@ -26,6 +34,7 @@ class App extends Component {
             id={picture.id}
             name={picture.name}
             image={picture.image}
+            coolFunction={this.increment}
           />
         ))}
         </Wrapper>
