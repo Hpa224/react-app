@@ -9,21 +9,38 @@ class App extends Component {
     pictures,
     score:0,
     highscore:0,
-    clicked:[]
   };
 
   increment = (event) => {
     const clicked = JSON.parse(event.target.dataset.clicked);
-    if(!clicked){
+    if(clicked===false){
       console.log("Not clicked")
       event.target.dataset.clicked = "true";
+      this.setState({score: this.state.score + 1 });
+      this.randomize()
     }
     else {
+      this.setState({score: 0 });
+      this.setState({highscore: this.state.score });
       console.log("clicked")
     }
-    this.setState({score: this.state.score + 1 });
+
+    };
+    
+  randomize = () => {
+    this.setState((this.state.pictures = this.randomizer(this.state.pictures)));
     };
   
+  randomizer = (array) => {
+    var i, j, k;
+    for (i = 0; i < array.length; i++) {
+      j = Math.floor(Math.random() * 6);
+      k = array[i];
+      array[i] = array[j];
+      array[j] = k;
+      }
+    return array;
+  };
 
   render() {
     return (
@@ -35,6 +52,7 @@ class App extends Component {
             name={picture.name}
             image={picture.image}
             coolFunction={this.increment}
+            status={picture.status}
           />
         ))}
         </Wrapper>
