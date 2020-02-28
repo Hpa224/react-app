@@ -2,7 +2,7 @@ import React from "react";
 
 let Header = (props) => {
    return (
-      <div classname="scores">
+      <div className="scores">
          Score: {props.score} Highscore: {props.highscore}
       </div>
       );
