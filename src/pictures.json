@@ -31,6 +31,42 @@
    },
    {
       "id": 6,
+      "name": "Anti Venom",
+      "image": "https://i.pinimg.com/originals/d8/5c/f3/d85cf39e2b55ff1606c604e9e2ccb5d3.jpg",
+      "status": "false"
+   },
+   {
+      "id": 7,
+      "name": "Phage",
+      "image": "https://i.pinimg.com/originals/dd/bb/5e/ddbb5e7e71a42e7ba79b7b5fd2925bdd.png",
+      "status": "false"
+   },
+   {
+      "id": 8,
+      "name": "Scream",
+      "image": "https://pm1.narvii.com/7068/aeb49359f5919d340e259c1667bafcdba314f648r1-1543-2048v2_hq.jpg",
+      "status": "false"
+   },
+   {
+      "id": 9,
+      "name": "Gambit",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/94/Gambit_%28Marvel_Comics%29.png/250px-Gambit_%28Marvel_Comics%29.png",
+      "status": "false"
+   },
+   {
+      "id": 10,
+      "name": "Apocalypse",
+      "image": "https://i.pinimg.com/originals/fa/d0/8e/fad08e0179274b9656c860a08b9f7940.jpg",
+      "status": "false"
+   },
+   {
+      "id": 11,
+      "name": "Thanos",
+      "image": "https://www.sideshow.com/storage/product-images/903429/thanos_marvel_feature.jpg",
+      "status": "false"
+   },
+   {
+      "id": 12,
       "name": "Carnage",
       "image": "https://www.syfy.com/sites/syfy/files/styles/1200x680/public/2018/10/carnage_-_asm_361.jpg",
       "status": "false"
