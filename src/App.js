@@ -44,46 +44,58 @@ class App extends Component {
     else if (id===2) {
       this.setState({clicked2: this.state.clicked2 + 1 });
       console.log(`counter 2 is ${this.state.clicked2}`)
+      console.log(`the score is ${this.state.score}`)
+
       }
     else if (id===3) {  
       this.setState({clicked3: this.state.clicked3 + 1 });
       console.log(`counter 3 is ${this.state.clicked3}`)
+      console.log(`the score is ${this.state.score}`)
       }
     else if (id===4) {  
       this.setState({clicked4: this.state.clicked4 + 1 });
       console.log(`counter 4 is ${this.state.clicked4}`)
+      console.log(`the score is ${this.state.score}`)
       }
     else if (id===5) {  
       this.setState({clicked5: this.state.clicked5 + 1 });
       console.log(`counter 5 is ${this.state.clicked5}`)
+      console.log(`the score is ${this.state.score}`)
       }
     else if (id===6) {  
       this.setState({clicked6: this.state.clicked6 + 1 });
       console.log(`counter 6 is ${this.state.clicked6}`)
+      console.log(`the score is ${this.state.score}`)
       }
     else if (id===7) {  
       this.setState({clicked7: this.state.clicked7 + 1 });
       console.log(`counter 7 is ${this.state.clicked7}`)
+      console.log(`the score is ${this.state.score}`)
       }
     else if (id===8) {  
       this.setState({clicked8: this.state.clicked8 + 1 });
       console.log(`counter 8 is ${this.state.clicked8}`)
+      console.log(`the score is ${this.state.score}`)
       }
     else if (id===9) {  
       this.setState({clicked9: this.state.clicked9 + 1 });
       console.log(`counter 9 is ${this.state.clicked9}`)
+      console.log(`the score is ${this.state.score}`)
       }
     else if (id===10) {  
       this.setState({clicked10: this.state.clicked10 + 1 });
       console.log(`counter 10 is ${this.state.clicked10}`)
+      console.log(`the score is ${this.state.score}`)
       }
     else if (id===11) {  
       this.setState({clicked11: this.state.clicked11 + 1 });
       console.log(`counter 11 is ${this.state.clicked11}`)
+      console.log(`the score is ${this.state.score}`)
       }
     else if (id===12) {  
       this.setState({clicked12: this.state.clicked12 + 1 });
       console.log(`counter 12 is ${this.state.clicked12}`)
+      console.log(`the score is ${this.state.score}`)
       }
     }
 
