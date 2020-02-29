@@ -23,22 +23,16 @@ class App extends Component {
     clicked12:0,
   };
 
-  // increment = (event) => {
-  //   const clicked = JSON.parse(event.target.dataset.clicked);
-  //   if(clicked===false){
-  //     console.log("Not clicked")
-  //     event.target.dataset.clicked = "true";
-  //     this.setState({score: this.state.score + 1 });
-  //     this.randomize()
-  //   }
-  //   else {
-  //     this.setState({score: 0 });
-  //     this.setState({highscore: this.state.score });
-  //     console.log("clicked")
-  //   }
-  // };
-
   increment = (event) => {
+    this.counterupdate(event)
+    this.conditions()
+    };
+
+  randomize = () => {
+    this.setState(this.state.pictures = this.randomizer(this.state.pictures));
+    };
+  
+  counterupdate = (event) => {
     const clicked = JSON.parse(event.target.dataset.clicked);
     const id = JSON.parse(event.target.dataset.id);
 
@@ -46,91 +40,71 @@ class App extends Component {
       this.setState({clicked1: this.state.clicked1 + 1 });
       console.log(`counter 1 is ${this.state.clicked1}`)
       console.log(`the score is ${this.state.score}`)
-    }
+      }
     else if (id===2) {
       this.setState({clicked2: this.state.clicked2 + 1 });
       console.log(`counter 2 is ${this.state.clicked2}`)
-    }
+      }
     else if (id===3) {  
       this.setState({clicked3: this.state.clicked3 + 1 });
       console.log(`counter 3 is ${this.state.clicked3}`)
-    }
+      }
     else if (id===4) {  
       this.setState({clicked4: this.state.clicked4 + 1 });
       console.log(`counter 4 is ${this.state.clicked4}`)
-    }
+      }
     else if (id===5) {  
       this.setState({clicked5: this.state.clicked5 + 1 });
       console.log(`counter 5 is ${this.state.clicked5}`)
-    }
+      }
     else if (id===6) {  
       this.setState({clicked6: this.state.clicked6 + 1 });
       console.log(`counter 6 is ${this.state.clicked6}`)
-    }
+      }
     else if (id===7) {  
       this.setState({clicked7: this.state.clicked7 + 1 });
       console.log(`counter 7 is ${this.state.clicked7}`)
-    }
+      }
     else if (id===8) {  
       this.setState({clicked8: this.state.clicked8 + 1 });
       console.log(`counter 8 is ${this.state.clicked8}`)
-    }
+      }
     else if (id===9) {  
       this.setState({clicked9: this.state.clicked9 + 1 });
       console.log(`counter 9 is ${this.state.clicked9}`)
-    }
+      }
     else if (id===10) {  
       this.setState({clicked10: this.state.clicked10 + 1 });
       console.log(`counter 10 is ${this.state.clicked10}`)
-    }
+      }
     else if (id===11) {  
       this.setState({clicked11: this.state.clicked11 + 1 });
       console.log(`counter 11 is ${this.state.clicked11}`)
-    }
+      }
     else if (id===12) {  
       this.setState({clicked12: this.state.clicked12 + 1 });
       console.log(`counter 12 is ${this.state.clicked12}`)
+      }
     }
 
-    if (this.state.clicked1 <= 1 && this.state.clicked2 <= 1 && this.state.clicked3 <= 1 && this.state.clicked4 <= 1 && this.state.clicked5 <= 1 &&this.state.clicked6 <= 1 &&this.state.clicked7 <= 1 &&this.state.clicked8 <= 1 && this.state.clicked9 <= 1 && this.state.clicked10 <= 1 &&this.state.clicked11 <= 1 && this.state.clicked12 <= 1) {
-      console.log("point")
-      this.randomize()
-      this.setState({score: this.state.score + 1 });
-    }
-    else{
-      this.setState({highscore: this.state.score });
-      this.setState({score: 0 });
-      console.log("lost")
-      this.randomize()
-      };
-      
-
-    // Old logic. Boolean doesnt travel with img tag
-    // if(clicked===false){
-    //   console.log("Not clicked")
-    //   console.log(clicked)
-    //   console.log(`the id is ${id}`)
-    //   event.target.dataset.clicked = "true";
-    //   this.setState({score: this.state.score + 1 });
-    //   this.randomize()
-    //   console.log(this.state.score)
-    // }
-    // else {
-    //   this.setState({score: 0 });
-    //   this.setState({highscore: this.state.score });
-    //   console.log("clicked")
-    // }
-
-    };
-      
-  randomize = () => {
-    this.setState(this.state.pictures = this.randomizer(this.state.pictures));
-    };
+    conditions = () => {
+      if (this.state.clicked1 <= 1 && this.state.clicked2 <= 1 && this.state.clicked3 <= 1 && this.state.clicked4 <= 1 && this.state.clicked5 <= 1 &&this.state.clicked6 <= 1 &&this.state.clicked7 <= 1 &&this.state.clicked8 <= 1 && this.state.clicked9 <= 1 && this.state.clicked10 <= 1 &&this.state.clicked11 <= 1 && this.state.clicked12 <= 1) {
+        console.log("point")
+        this.randomize()
+        this.setState({score: this.state.score + 1 });
+        }
+      else {
+        this.setState({highscore: this.state.score });
+        this.setState({score: 0 });
+        console.log("lost")
+        this.randomize()
+        };
+      }
 
   randomizer = (array) => {
     var i, j, k;
     for (i = 0; i < array.length; i++) {
-      j = Math.floor(Math.random() * 3);
+      j = Math.floor(Math.random() * 12);
       k = array[i];
       array[i] = array[j];
       array[j] = k;
@@ -148,6 +122,7 @@ class App extends Component {
             name={picture.name}
             image={picture.image}
             coolFunction={this.increment}
+            updater={this.counterupdate}
           />
         ))}
         </Wrapper>
