@@ -5,7 +5,7 @@ let Image = (props) => {
    return (
       <div className="card">
          <div className="img-container">
-            <img alt={props.name} src={props.image} className="col" data-clicked={false} testattr={props.status} data-id={props.id} onClick={(e) => props.coolFunction(e)}/>
+            <img alt={props.name} src={props.image} className="col" data-id={props.id} state={props.status} onClick={(e) => props.coolFunction(e)}/>
          </div>
       </div>
       );
