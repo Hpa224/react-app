@@ -49,7 +49,7 @@ class App extends Component {
     let id = JSON.parse(event.target.dataset.id);
     for (let i = 0; i < pictures.length; i++) {
       if (pictures[i].id === id) {
-        pictures[id].status=true;
+        pictures[id].status = true;
       }
     }
   } 
